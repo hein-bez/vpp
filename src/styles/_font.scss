@@ -1,0 +1,32 @@
+@font-face {
+    font-family: ManropeL, sans-serif;
+}
+
+@font-face {
+    font-family: ManropeR, sans-serif;
+}
+
+@font-face {
+    font-family: ManropeM, sans-serif;
+}
+
+@mixin font120 {
+    font-size: 6.89vw;
+    letter-spacing: -3px;
+    font-weight: 900;
+
+    @include devices(laptop) {
+        font-size: 5vw;
+        letter-spacing: -2px;
+        line-height: 130%;
+    }
+
+    @include devices(tablet) {
+        font-size: 6.5vw;
+    }
+
+    @include devices(mobile) {
+        font-size: 8vw;
+        letter-spacing: -1px;
+    }
+}

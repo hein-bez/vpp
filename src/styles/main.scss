@@ -1,0 +1,210 @@
+/* colors */
+$black: #131417;
+$grey: #9FA0A3;
+$white: #fff;
+$bgColor: #fff;
+
+// Define breakpoints
+$breakpoints: (
+    "mobile": 320px,
+    "tablet": 768px,
+    "desktop": 1024px,
+    "large-desktop": 1200px
+);
+
+// Mixin for media queries
+@mixin devices($device) {
+    $breakpoint: map-get($breakpoints, $device);
+
+    @if $breakpoint {
+        @media (min-width: $breakpoint) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "No value found for `#{$device}` in $breakpoints map.";
+    }
+}
+
+// Usage example:
+// @include devices(tablet) {
+//   // Your styles here
+// }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: white !important;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "Open Sans", sans-serif !important;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    width: 100%;
+    overflow: hidden
+}
+
+/*- breakpoints -*/
+@mixin devices ($breakpoint) {
+
+    @if $breakpoint ==laptop {
+        @media only screen and (max-width: 1140px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==tablet {
+        @media only screen and (max-width: 912px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==mobile {
+        @media only screen and (max-width: 670px) {
+            @content;
+        }
+    }
+}
+
+/*- Margins n Padding */
+.container {
+    padding-left: 5.2vw;
+    padding-right: 5.2vw;
+
+    @include devices(mobile) {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 16vh 0;
+    background-color: white;
+}
+
+.benefit {
+    text-align: center;
+    width: 20%;
+    padding: 8px;
+
+    img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 24px;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+        font-weight: 500;
+        color: #111;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .note {
+        display: block;
+        font-size: 0.8rem;
+        color: #777;
+
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+    }
+}
+
+.bento-container {
+    display: grid;
+    grid-template-areas:
+        "box1 box2"
+        "box3 box3";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    min-height: 95vh;
+    padding-bottom: 5vh;
+    gap: 16px;
+    overflow: visible;
+
+    .box {
+        background-color: #ddd;
+        box-shadow: 0px 0px 500px rgba(0,0,0,0.05);
+        border-radius: 16px;
+        padding: 48px;
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 500;
+            padding-bottom: 24px;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+    .box1 {
+        grid-area: box1;
+        background: #000;
+        color: white;
+    }
+
+    .box2 {
+        grid-area: box2;
+        background: white;
+    }
+
+    .box3 {
+        grid-area: box3;
+    }
+}
+
+@media (max-width: 768px) {
+    .bento-container {
+        grid-template-areas:
+            "box1"
+            "box2"
+            "box3";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 5vw;
+}
+
+/* components */
+@import "font";
+@import "nav";
+@import "hero";
+@import "footer";
+@import "contact";
