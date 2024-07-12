@@ -1,11 +1,12 @@
 .hero {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     position: relative;
+    background: #000;
     color: white;
   
     &::before {
@@ -14,8 +15,8 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 60vh;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+      height: 40vh;
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
       z-index: 1;
     }
   }
@@ -50,24 +51,25 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     padding: 20px;
   
     .text {
-      margin-top: 10vh;
-      
-      h1 {
-        font-size: 4rem;
-        margin-bottom: 10px;
-        font-weight: 300;
-        color: white;
-      }
-  
-      p {
-        font-size: 1.2rem;
-      }
+        max-width: 40vw;
+        margin-top: 10vh;
+        
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+            color: white;
+        }
+    
+        p {
+            font-size: 1.2rem;
+        }
     }
   
     .cta {

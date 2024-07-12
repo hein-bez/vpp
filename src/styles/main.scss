@@ -154,7 +154,7 @@ section {
 
     .box {
         background-color: #ddd;
-        box-shadow: 0px 0px 500px rgba(0,0,0,0.05);
+        box-shadow: 0px 0px 500px rgba(0, 0, 0, 0.05);
         border-radius: 16px;
         padding: 48px;
 
@@ -200,6 +200,79 @@ section {
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 5vw;
+}
+
+/* Carousel */
+.bento-container .carousel {
+    padding: 0;
+
+}
+.carousel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .carousel-track-container {
+        position: relative;
+        overflow: hidden;
+        flex: 1;
+        /* Allow this container to grow and fill the available space */
+    }
+
+    .carousel-track {
+        position: relative;
+        height: 100%;
+        /* Ensure the track fills the container */
+    }
+
+    .carousel-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.current-slide {
+            opacity: 1;
+        }
+
+        &:first-child {
+            background: red;
+        }
+
+        &:nth-child(2) {
+            background: yellow;
+        }
+
+        &:nth-child(3) {
+            background: blue;
+        }
+    }
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: space-around;
+
+    .carousel-nav-item {
+        text-align: center;
+        cursor: pointer;
+
+        &:hover,
+        &.active {
+            color: red;
+        }
+
+        span {
+            display: block;
+            font-size: 16px;
+        }
+    }
 }
 
 /* components */

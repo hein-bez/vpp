@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="hero" style="background-image: url(images/hero-image-1.webp)">
+<div class="hero">
   <!-- <video autoplay="true" src="images/agl-video.mp4" /> -->
   <header>
     <nav>
@@ -24,8 +24,9 @@
   </header>
   <main>
     <div class="text">
-      <h1>Solar and Battery</h1>
-      <p>Join Australia's Most Trusted Virtual Power Plant</p>
+      <img width="64" src="images/bolt.svg" />
+      <h1>Solar, batteries and Virtual Powerplant all in one place</h1>
+      <p>Discover how solar power, batteries, and Virtual Power Plants (VPP) come together to provide a reliable and clean energy solution, significantly reducing costs beyond what solar or batteries can achieve alone.</p>
     </div>
     <div class="buttons">
       <button class="cta">Buy Now</button>
@@ -40,24 +41,24 @@
     <p>Take advantage of flexible Time of Use rates to reduce your energy bill. Become more aware of when and how you’re
       using your energy to help avoid peak periods.</p>
   </div>
-  <!-- <div class="benefit">
+  <div class="benefit">
     <img src="images/coin-convert.svg" alt="50 Discharge Cycles">
     <h3>50 Discharge Cycles</h3>
     <p>Powerwall will be limited to a maximum 50 discharge cycles per year. An event can range from a very small amount
       (less than 1 kWh), up to the full capacity, excluding backup reserve.</p>
-  </div> -->
+  </div>
   <div class="benefit">
     <img src="images/shield-bolt.svg" alt="Extended Warranty">
     <h3>Extended Warranty</h3>
     <p>Receive five additional years on the warranty of your new Powerwall while you remain connected to the Tesla
       Energy Plan.</p>
   </div>
-  <div class="benefit">
+  <!-- <div class="benefit">
     <img src="images/coins.svg" alt="Grid Support Credits">
     <h3>Grid Support Credits</h3>
     <p>Receive Grid Support Credits for each Powerwall that you own in addition to the other benefits included in your
       Tesla Energy Plan.</p>
-  </div>
+  </div> -->
 </section>
 <section class="bento-container">
   <div class="box box1">
@@ -70,10 +71,37 @@
     <p>Fly through your tasks with rapid-fire keyboard shortcuts for everything. Literally everything.</p>
     <img width="600" src="images/battery.avif" />
   </div>
-  <div class="box box3"></div>
+  <div class="carousel box box3">
+    <div class="carousel-track-container">
+        <ul class="carousel-track">
+            <li class="carousel-slide current-slide">
+                <div class="slide-content"> <!-- Add your content here --></div>
+            </li>
+            <li class="carousel-slide">
+                <div class="slide-content"> <!-- Add your content here --></div>
+            </li>
+            <li class="carousel-slide">
+                <div class="slide-content"> <!-- Add your content here --></div>
+            </li>
+        </ul>
+    </div>
+  </div>
+  <div class="carousel-nav">
+    <div class="carousel-nav-item" data-slide="0">
+        <span>Option 1</span><br>
+        <span>Description</span>
+    </div>
+    <div class="carousel-nav-item" data-slide="1">
+        <span>Option 2</span><br>
+        <span>Description</span>
+    </div>
+    <div class="carousel-nav-item" data-slide="2">
+        <span>Option 3</span><br>
+        <span>Description</span>
+    </div>
+  </div>
 </section>
 <div id="cursor-dot"></div>
 <script src="bundle.js"></script>
 </body>
-
 </html>

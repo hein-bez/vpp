@@ -54,6 +54,31 @@ function calculateROI(
   };
 }
 
+class Carousel {
+  private slides: NodeListOf<HTMLElement>;
+  private navItems: NodeListOf<HTMLElement>;
+
+  constructor() {
+      this.slides = document.querySelectorAll('.carousel-slide')!;
+      this.navItems = document.querySelectorAll('.carousel-nav-item')!;
+
+      this.navItems.forEach(item => item.addEventListener('click', (e) => this.handleNavClick(e)));
+  }
+
+  private handleNavClick(event: Event): void {
+      const targetItem = event.currentTarget as HTMLElement;
+      const targetIndex = parseInt(targetItem.dataset.slide!);
+
+      this.navItems.forEach(item => item.classList.remove('active'));
+      targetItem.classList.add('active');
+
+      this.slides.forEach(slide => slide.classList.remove('current-slide'));
+      this.slides[targetIndex].classList.add('current-slide');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => new Carousel());
+
 // Example Usage
 const costSolar = 10000;
 const costBatteries = 5000;
