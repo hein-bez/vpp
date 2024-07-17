@@ -1,107 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Landing Page</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<div class="hero">
-  <!-- <video autoplay="true" src="images/agl-video.mp4" /> -->
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Vehicles</a></li>
-        <li><a href="#">Energy</a></li>
-        <li><a href="#">Charging</a></li>
-        <li><a href="#">Discover</a></li>
-        <li><a href="#">Shop</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="text">
-      <img width="64" src="images/bolt.svg" />
-      <h1>Solar, batteries and Virtual Powerplant all in one place</h1>
-      <p>Discover how solar power, batteries, and Virtual Power Plants (VPP) come together to provide a reliable and clean energy solution, significantly reducing costs beyond what solar or batteries can achieve alone.</p>
-    </div>
-    <div class="buttons">
-      <button class="cta">Buy Now</button>
-      <button class="cta">Schedule a Consultation</button>
-    </div>
-  </main>
-</div>
-<section class="benefits-container">
-  <div class="benefit">
-    <img src="images/dollar.svg" alt="Maximise Savings">
-    <h3>Maximise Savings</h3>
-    <p>Take advantage of flexible Time of Use rates to reduce your energy bill. Become more aware of when and how you’re
-      using your energy to help avoid peak periods.</p>
+  <div class="hero">
+    <!-- <video autoplay="true" src="images/agl-video.mp4" /> -->
+    <header>
+      <div class="logo">
+        <svg height="40" width="43" aria-hidden="true" role="img" aria-labelledby="AGL Logo">
+          <use href="#agl-logo-rgb" xlink:href="#agl-logo-rgb"></use>
+        </svg>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Vehicles</a></li>
+          <li><a href="#">Energy</a></li>
+          <li><a href="#">Charging</a></li>
+          <li><a href="#">Discover</a></li>
+          <li><a href="#">Shop</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- <div style="width: 100%; display: flex; justify-content: center">
+    <img src="images/house.png" />
+  </div> -->
+    <main>
+      <div class="text section-to-animate">
+        <img width="64" src="images/bolt.svg" />
+        <h1>Solar, Batteries and Virtual Powerplant in one place</h1>
+        <p>Learn how using solar panels, batteries, and virtual power plants together can give you clean energy and help
+          you save money.</p>
+      </div>
+      <div class="buttons section-to-animate">
+        <button data-target="calculator" class="cta button">Calculate Savings</button>
+        <!-- <button class="cta">Schedule a Consultation</button> -->
+      </div>
+    </main>
   </div>
-  <div class="benefit">
+
+  <section class="bento-container">
+    <div class="box box1 section-to-animate">
+        <div class="content">
+            <h4 class="small-text">Solar</h4>
+            <h3>Clean and Free Energy from the Sun</h3>
+            <p>Fly through your tasks with rapid-fire keyboard shortcuts for everything. Literally everything.</p>
+            <a class="button button-on-background">Browse Solar</a>
+        </div>
+        <img class="image-bottom-left" src="images/solar-2.jpg" />
+    </div>
+    <div class="box box2 section-to-animate">
+        <div class="content">
+            <h4 class="small-text">Battery</h4>
+            <h3>Stay in Control of your Power</h3>
+            <p>Fly through your tasks with rapid-fire keyboard shortcuts for everything. Literally everything.</p>
+            <a class="button button-on-background">Browse Battery</a>
+        </div>
+        <img class="image-bottom-center" src="images/battery.jpg" />
+    </div>
+    <div class="box box3 section-to-animate">
+        <div class="content">
+            <!-- <h4 class="small-text">Electric Vehicles</h4> -->
+            <!-- <h3>Drive into the future</h3> -->
+            <h4 class="small-text">Virtual Powerplant</h4>
+            <h3>Power Your Community and Save – Connect with Virtual Power Plant</h3>
+            <p>Fly through your tasks with rapid-fire keyboard shortcuts for everything. Literally everything.</p>
+            <a class="button button-on-background">Learn more</a>
+        </div>
+        <img class="image-bottom-left" src="images/car.jpg" />
+    </div>
+    <!-- <div class="box box4 section-to-animate">
+        <div class="content">
+            <h4 class="small-text">New Section</h4>
+            <h3>New Section Title</h3>
+            <p>New Section Description</p>
+            <a class="button button-on-background">Learn more</a>
+        </div>
+        <img class="image-bottom-center" src="images/new-section.jpg" />
+    </div> -->
+</section>
+
+  <!-- <img class="" src="images/house.png" /> -->
+  <section class="benefits-container section-to-animate">
+    <div class="benefit">
+      <img src="images/dollar.svg" alt="Maximise Savings">
+      <h4>Free Installation</h4>
+      <p>Take advantage of flexible Time of Use rates to reduce your energy bill. Become more aware of when and how
+        you’re
+        using your energy to help avoid peak periods.</p>
+    </div>
+    <div class="benefit">
+      <img src="images/coin-convert.svg" alt="50 Discharge Cycles">
+      <h4>Full Control</h4>
+      <p>Powerwall will be limited to a maximum 50 discharge cycles per year. An event can range from a very small
+        amount
+        (less than 1 kWh), up to the full capacity, excluding backup reserve.</p>
+    </div>
+    <!-- <div class="benefit">
     <img src="images/coin-convert.svg" alt="50 Discharge Cycles">
-    <h3>50 Discharge Cycles</h3>
+    <h4>50 Discharge Cycles</h4>
     <p>Powerwall will be limited to a maximum 50 discharge cycles per year. An event can range from a very small amount
       (less than 1 kWh), up to the full capacity, excluding backup reserve.</p>
-  </div>
-  <div class="benefit">
-    <img src="images/shield-bolt.svg" alt="Extended Warranty">
-    <h3>Extended Warranty</h3>
-    <p>Receive five additional years on the warranty of your new Powerwall while you remain connected to the Tesla
-      Energy Plan.</p>
-  </div>
-  <!-- <div class="benefit">
+  </div> -->
+    <div class="benefit">
+      <img src="images/shield-bolt.svg" alt="Extended Warranty">
+      <h4>Extended Warranty</h4>
+      <p>Receive five additional years on the warranty of your new Powerwall while you remain connected to the Tesla
+        Energy Plan.</p>
+    </div>
+    <!-- <div class="benefit">
     <img src="images/coins.svg" alt="Grid Support Credits">
     <h3>Grid Support Credits</h3>
     <p>Receive Grid Support Credits for each Powerwall that you own in addition to the other benefits included in your
       Tesla Energy Plan.</p>
   </div> -->
-</section>
-<section class="bento-container">
-  <div class="box box1">
-    <h2>Solar Panels for Maximum Return</h2>
-    <p>Fly through your tasks with rapid-fire keyboard shortcuts for everything. Literally everything.</p>
-    <img src="images/solar-panel-tesla.avif" />
+  </section>
+
+  <div id="calculator" class="feature feature-calculator">
+    <section class="calculator">
+      <div class="text">
+        <h2 class="heading">Calculate your Savings</h2>
+        <p>Learn how using solar panels, batteries, and virtual power plants together can give you clean energy and help
+          you save money.</p>
+      </div>
+      <div class="container form-calculator section-to-animate">
+        <div class="savings-info">
+          <div class="house-icon">
+            <svg width="60" height="60" viewBox="0 0 24 24">
+              <path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3z"></path>
+            </svg>
+          </div>
+          <div class="yearly-savings">
+            <h5>Yearly Savings</h5>
+            <h2 class="price" id="yearly-savings">$1,400</h2>
+            <p class="comparison">based on avg household</p>
+          </div>
+        </div>
+        <div class="savings-calculator">
+          <form>
+            <div class="option">
+              <label>
+                <div>
+                  <span class="option-text">Add Solar</span>
+                  <span class="savings">Save $994 annually</span>
+                </div>
+                <input type="checkbox" id="solar" data-savings="994" checked>
+              </label>
+            </div>
+            <div class="option">
+              <label>
+                <div>
+                  <span class="option-text">Add Battery</span>
+                  <span class="savings">Save $422 annually</span>
+                </div>
+                <input type="checkbox" id="battery" data-savings="422" checked>
+              </label>
+            </div>
+            <div class="option">
+              <label>
+                <div>
+                  <span class="option-text">Participate in VPP</span>
+                  <span class="description">When subscribed to our Virtual Powerplant, we'll pay you for sharing your
+                    excess electricity with us. Maximum of 120 kWh a year. <a href="#">Learn more</a></span>
+                  <span class="savings">Save $204 annually</span>
+                </div>
+                <input type="checkbox" id="vpp" data-savings="204" checked>
+              </label>
+            </div>
+          </form>
+          <div class="buttons">
+            <a id="checkout-button" class="button button-primary">Continue</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-  <div class="box box2">
-    <h2>Battery Storage for Excess Power</h2>
-    <p>Fly through your tasks with rapid-fire keyboard shortcuts for everything. Literally everything.</p>
-    <img width="600" src="images/battery.avif" />
+
+  <div class="feature feature-battery-storage" style="background-image:url('images/storm.jpg')">
+    <section class="backup">
+      <div class="content section-to-animate">
+        <div>
+          <h5 class="small-text">Virtual Powerplant</h5>
+          <h2 class="heading">Independent Power, Supported by the Grid</h2>
+        </div>
+        <p class="body">Enjoy the autonomy of generating your own energy while having the reliability of the grid when you need it.</p>
+      </div>
+    </section>
   </div>
-  <div class="carousel box box3">
-    <div class="carousel-track-container">
-        <ul class="carousel-track">
-            <li class="carousel-slide current-slide">
-                <div class="slide-content"> <!-- Add your content here --></div>
-            </li>
-            <li class="carousel-slide">
-                <div class="slide-content"> <!-- Add your content here --></div>
-            </li>
-            <li class="carousel-slide">
-                <div class="slide-content"> <!-- Add your content here --></div>
-            </li>
-        </ul>
-    </div>
+
+  <div class="feature feature-vpp">
+    <section class="vpp">
+      <div class="carousel section-to-animate">
+
+      </div>
+    </section>
   </div>
-  <div class="carousel-nav">
-    <div class="carousel-nav-item" data-slide="0">
-        <span>Option 1</span><br>
-        <span>Description</span>
-    </div>
-    <div class="carousel-nav-item" data-slide="1">
-        <span>Option 2</span><br>
-        <span>Description</span>
-    </div>
-    <div class="carousel-nav-item" data-slide="2">
-        <span>Option 3</span><br>
-        <span>Description</span>
-    </div>
-  </div>
-</section>
-<div id="cursor-dot"></div>
-<script src="bundle.js"></script>
+
+  <div id="cursor-dot"></div>
+  <script src="bundle.js"></script>
 </body>
+
 </html>

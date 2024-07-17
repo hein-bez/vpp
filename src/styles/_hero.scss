@@ -6,48 +6,47 @@
     background-position: top center;
     background-size: cover;
     position: relative;
-    background: #000;
-    color: white;
-  
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 40vh;
-      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
-      z-index: 1;
-    }
-  }
-  
-  header {
+    background: $background-primary;
+    background-image: linear-gradient(0, transparent, #E5E8F7);
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 40vh;
+    //     // background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    //     z-index: 1;
+    // }
+}
+
+header {
     padding: 24px;
-    
-    nav { 
+
+    nav {
         display: flex;
-        justify-content: center; 
+        justify-content: center;
     }
-    
+
     nav ul {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-  
-      li {
-        margin: 0 15px;
-      }
-  
-      a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-      }
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: 0 15px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
     }
-  }
-  
-  main {
+}
+
+main {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -55,41 +54,42 @@
     align-items: center;
     text-align: center;
     padding: 20px;
-  
+
     .text {
         max-width: 40vw;
         margin-top: 10vh;
-        
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 10px;
-            font-weight: 300;
-            color: white;
-        }
-    
-        p {
-            font-size: 1.2rem;
-        }
-    }
-  
-    .cta {
-      background-color: transparent;
-      border: 2px solid white;
-      color: white;
-      padding: 10px 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-bottom: 30px;
-      z-index: 2;
-    }
-  }
 
-  .buttons {
+        h1 {
+            // font-size: 4rem;
+            // font-weight: 300;
+            margin-bottom: 10px;
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-top: 2rem;
+            // font-size: 1.2rem;
+            // line-height: 2rem;
+        }
+    }
+
+    .cta {
+        background-color: transparent;
+        border: 2px solid $button-label-on-background;
+        color: white;
+        padding: 10px 20px;
+        //   font-size: 1rem;
+        cursor: pointer;
+        margin-bottom: 30px;
+        z-index: 2;
+    }
+}
+
+.buttons {
     display: flex;
     gap: 20px;
 
     button:first-child {
-        background: white;
-        color: black;
+        color: $button-label-on-background;
     }
-  }
+}

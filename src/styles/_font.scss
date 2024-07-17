@@ -1,32 +1,214 @@
-@font-face {
-    font-family: ManropeL, sans-serif;
+// Define font families
+$font-family-sf-pro-text: "Inter", sans-serif;
+$font-family-sf-pro-display: "Inter", sans-serif;
+$font-family-sf-pro-rounded: "Inter", sans-serif;
+
+// Define font weights
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-heavy: 800;
+
+// Headings
+h1,
+.h1 {
+    font-family: $font-family-sf-pro-display;
+    font-weight: $font-weight-regular;
+    font-size: 3.75rem; // Larger size
+    color: $label-primary;
+    line-height: 1.0714285714;
+    font-weight: 600;
+    letter-spacing: -0.005em;
 }
 
-@font-face {
-    font-family: ManropeR, sans-serif;
+h2,
+.h2 {
+    font-family: $font-family-sf-pro-display;
+    font-weight: $font-weight-bold;
+    font-size: 3rem; // Larger size
+    color: $label-primary;
 }
 
-@font-face {
-    font-family: ManropeM, sans-serif;
+h3,
+.h3 {
+    font-family: $font-family-sf-pro-display;
+    font-weight: $font-weight-semibold;
+    color: $label-primary;
+    font-size: 2rem;
+    line-height: 1.1428571429;
+    font-weight: 600;
+    letter-spacing: .007em;
 }
 
-@mixin font120 {
-    font-size: 6.89vw;
-    letter-spacing: -3px;
-    font-weight: 900;
+h4,
+.h4 {
+    font-family: $font-family-sf-pro-display;
+    font-weight: $font-weight-medium;
+    font-size: 1.5rem; // Larger size
+    color: $label-primary;
+}
 
-    @include devices(laptop) {
-        font-size: 5vw;
-        letter-spacing: -2px;
-        line-height: 130%;
+h5,
+.h5 {
+    font-family: $font-family-sf-pro-display;
+    font-weight: $font-weight-medium;
+    font-size: 1.5rem; // Larger size
+    color: $label-secondary;
+}
+
+h6,
+.h6 {
+    font-family: $font-family-sf-pro-display;
+    font-weight: $font-weight-medium;
+    font-size: 1.25rem; // Larger size
+    color: $label-secondary;
+}
+
+// Body Text
+body,
+p {
+    font-family: $font-family-sf-pro-text;
+    font-weight: $font-weight-regular;
+    font-size: 1.225rem; // Larger size
+    // line-height: 1.6;
+    color: $label-secondary;
+    line-height: 1.5353641176;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+p {
+    opacity: 0.9;
+}
+
+// Subheadings and UI Elements
+.subheading,
+.ui-element {
+    font-family: $font-family-sf-pro-text;
+    font-weight: $font-weight-medium;
+    font-size: 1.125rem; // Larger size
+}
+
+// Captions and Small Text
+.caption,
+.small-text {
+    font-family: $font-family-sf-pro-text;
+    font-weight: $font-weight-light;
+    font-size: 1rem; // Larger size
+    color: $label-quarter;
+}
+
+// Buttons
+.button {
+    font-family: $font-family-sf-pro-text;
+    font-weight: $font-weight-bold;
+    font-size: 1.125rem; // Larger size
+}
+
+// Responsive font sizes for mobile
+@media (max-width: 768px) {
+
+    h1,
+    .h1 {
+        font-size: 2.75rem;
     }
 
-    @include devices(tablet) {
-        font-size: 6.5vw;
+    h2,
+    .h2 {
+        font-size: 2.25rem;
     }
 
-    @include devices(mobile) {
-        font-size: 8vw;
-        letter-spacing: -1px;
+    h3,
+    .h3 {
+        font-size: 2rem;
+    }
+
+    h4,
+    .h4 {
+        font-size: 1.75rem;
+    }
+
+    h5,
+    .h5 {
+        font-size: 1.5rem;
+    }
+
+    h6,
+    .h6 {
+        font-size: 1.25rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    .subheading,
+    .ui-element {
+        font-size: 1rem;
+    }
+
+    .caption,
+    .small-text {
+        font-size: 0.875rem;
+    }
+
+    .button {
+        font-size: 1rem;
+    }
+}
+
+// Responsive font sizes for smaller mobile screens
+@media (max-width: 480px) {
+
+    h1,
+    .h1 {
+        font-size: 2.25rem;
+    }
+
+    h2,
+    .h2 {
+        font-size: 2rem;
+    }
+
+    h3,
+    .h3 {
+        font-size: 1.75rem;
+    }
+
+    h4,
+    .h4 {
+        font-size: 1.5rem;
+    }
+
+    h5,
+    .h5 {
+        font-size: 1.25rem;
+    }
+
+    h6,
+    .h6 {
+        font-size: 1rem;
+    }
+
+    body,
+    p {
+        font-size: 0.875rem;
+    }
+
+    .subheading,
+    .ui-element {
+        font-size: 0.875rem;
+    }
+
+    .caption,
+    .small-text {
+        font-size: 0.75rem;
+    }
+
+    .button {
+        font-size: 0.875rem;
     }
 }

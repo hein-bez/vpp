@@ -1,0 +1,15 @@
+nav {
+    a {
+        color: $label-secondary;
+        font-weight: 500 !important;
+        font-size: 1rem;
+    }
+}
+
+.button {
+    padding: 12px 20px;
+    background: white;
+    color: $colour-black;
+    border-radius: 12px;
+    cursor: pointer;
+}

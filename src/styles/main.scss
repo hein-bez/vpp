@@ -1,8 +1,73 @@
-/* colors */
-$black: #131417;
-$grey: #9FA0A3;
-$white: #fff;
-$bgColor: #fff;
+$card-padding: 32px;
+$card-corner-radius: 32px;
+$grid-gap: 20px;
+
+$section-padding-top: 180px;
+$section-padding-bottom: 180px;
+$section-width: 80vw;
+$section-max-width: 1680px;
+
+/* Light */
+$background-primary: #ffffff;
+$background-secondary: #f7f7f9;
+$background-tertiary: #eff0f4;
+$button-primary: #001cb0;
+$button-secondary: #e6e8f7;
+$button-label-on-background: #001cb0;
+$button-label-on-primary: #ffffff;
+$chrome-primary: #ffffffcc;
+$chrome-secondary: #f7f7f9cc;
+$colour-accent: #00dfed;
+$colour-black: #000000;
+$colour-brand: #001cb0;
+$colour-white: #ffffff;
+$colour-service-battery: #00c981;
+$colour-service-elec: #001cb0;
+$colour-service-gas: #f6a623;
+$colour-service-solar: #ffe344;
+$colour-service-telco: #9d15ff;
+$colour-status-error: #ce2a3e;
+$colour-status-information: #6031a6;
+$colour-status-null: #a7a9b3;
+$colour-status-success: #008000;
+$colour-status-warning: #f6a623;
+$colour-status-on-error: #ffffff;
+$label-primary: #000000;
+$label-quarter: #a7a9b3;
+$label-secondary: #2b2e31;
+$label-tertiary: #6b6d77;
+$seperator-non-opaque: #d6d9e0;
+
+/* Dark */
+// $background-primary: #111;
+// $background-secondary: #0a0a0b;
+// $background-tertiary: #2c2c2e;
+// $button-primary: #0070f0;
+// $button-secondary: #eff0f4;
+// $button-label-on-background: #3895ff;
+// $button-label-on-primary: #ffffff;
+// $chrome-primary: #1b1b1dcc;
+// $chrome-secondary: #0a0a0bcc;
+// $colour-accent: #00dfed;
+// $colour-black: #000000;
+// $colour-brand: #0070f0;
+// $colour-white: #ffffff;
+// $colour-service-battery: #00c981;
+// $colour-service-elec: #001cb0;
+// $colour-service-gas: #ff9f0a;
+// $colour-service-solar: #ffd60a;
+// $colour-service-telco: #9f5afb;
+// $colour-status-error: #df6271;
+// $colour-status-information: #6031a6;
+// $colour-status-null: #a7a9b3;
+// $colour-status-success: #008000;
+// $colour-status-warning: #f6a623;
+// $colour-status-on-error: #ffffff;
+// $label-primary: #ffffff;
+// $label-quarter: #6b6d77;
+// $label-secondary: #d6d9e0;
+// $label-tertiary: #a7a9b3;
+// $seperator-non-opaque: #38383a;
 
 // Define breakpoints
 $breakpoints: (
@@ -38,17 +103,19 @@ $breakpoints: (
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
-    background: white !important;
+    background: $background-primary;
     width: 100%;
     overflow-x: hidden;
-    font-family: "Open Sans", sans-serif !important;
+    font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+    font-variation-settings: "slnt" 0;
 }
 
 a {
@@ -62,6 +129,203 @@ ul {
 section {
     width: 100%;
     overflow: hidden
+}
+
+.feature {
+    display: flex;
+    padding-top: $section-padding-top;
+    padding-bottom: $section-padding-bottom;
+    min-height: 100vh;
+    position: relative;
+
+    /* Calculator */
+    &.feature-calculator {
+        background: $background-secondary;
+
+        .text {
+            max-width: 40vw;
+            align-self: center;
+            // margin-top: 10vh;
+            text-align: center;
+
+            h1 {
+                // font-size: 4rem;
+                // font-weight: 300;
+                margin-bottom: 10px;
+            }
+
+            p {
+                margin-top: 2rem;
+                // font-size: 1.2rem;
+                // line-height: 2rem;
+            }
+        }
+
+        .calculator {
+            display: flex;
+            flex-flow: column;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: flex-start;
+        }
+
+        .buttons {
+            display: flex;
+            margin-top: 20px;
+
+            .button {
+                width: 100%;
+                text-align: center;
+            }
+
+            .button-primary {
+                background: $label-primary;
+                color: $button-label-on-primary;
+
+                &.disabled {
+                    background: $seperator-non-opaque;
+                    cursor: not-allowed;
+                }
+            }
+
+            .button-secondary {
+                color: $label-primary;
+                border: 2.5px solid $label-primary;
+            }
+        }
+
+        .form-calculator {
+            display: flex;
+            padding: 48px;
+            background: $background-primary;
+            margin-top: 10vh;
+            border-radius: $card-corner-radius;
+
+            .savings-info {
+                margin-right: 48px;
+                min-width: 300px;
+            }
+
+            .savings-calculator {
+                display: flex;
+                width: 100%;
+                flex-flow: column;
+                padding-left: 48px;
+                border-left: .5px solid $seperator-non-opaque;
+
+                div.option {
+                    width: 100%;
+                    padding: 16px 0;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $seperator-non-opaque;
+                    }
+
+                    label {
+                        display: flex;
+                        cursor: pointer;
+
+                        div {
+                            display: flex;
+                            flex-flow: column;
+                            width: 100%;
+                        }
+
+                        .savings,
+                        .description {
+                            font-size: 1rem;
+                            color: $label-tertiary;
+
+                            a {
+                                color: $button-label-on-background;
+                            }
+                        }
+
+                        .description {
+                            max-width: 400px;
+                            padding: 8px 0;
+                        }
+                    }
+
+                    input {
+                        margin-left: 16px;
+                        width: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Battery Storage */
+    &.feature-battery-storage {
+        align-items: end;
+        background-color: black;
+        background-size: cover;
+        background-position: bottom center;
+        background-position-y: -150px;
+        background-repeat: no-repeat;
+
+        &:before {
+            content: "";
+            z-index: 1;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(10deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
+            width: 100%;
+            height: 100vh;
+        }
+    }
+
+    .small-text {
+        margin-bottom: 24px;
+        color: white;
+        font-weight: 500;
+    }
+
+    .content {
+        display: flex;
+        align-items: end;
+        position: relative;
+        z-index: 2;
+        max-width: 70vw;
+        padding: 0 48px;
+
+        .heading,
+        .body {
+            color: $colour-white;
+        }
+
+        .heading {
+            // margin-bottom: 2rem;
+            line-height: 4rem;
+            // max-width: 30vw;
+        }
+
+        .body {
+            // max-width: 40vw;
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+    }
+
+    /* VPP */
+    &.feature-vpp {
+        background: black;
+        min-height: auto;
+        padding-top: 0;
+
+        /* Carousel */
+        .carousel {
+            background: #111;
+            display: flex;
+            width: 100%;
+            min-height: 60vh;
+        }
+    }
 }
 
 /*- breakpoints -*/
@@ -101,8 +365,8 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 16vh 0;
-    background-color: white;
+    padding-top: $section-padding-top;
+    padding-bottom: $section-padding-bottom;
 }
 
 .benefit {
@@ -116,21 +380,21 @@ section {
         margin-bottom: 24px;
     }
 
-    h3 {
-        font-size: 1.4rem;
+    h4 {
+        // font-size: 1.4rem;
         margin-bottom: 16px;
-        font-weight: 500;
-        color: #111;
+        // font-weight: 500;
+        color: $label-primary;
     }
 
     p {
-        font-size: 1rem;
-        color: #555;
+        // font-size: 1rem;
+        color: $label-tertiary;
     }
 
     .note {
         display: block;
-        font-size: 0.8rem;
+        // font-size: 0.8rem;
         color: #777;
 
         a {
@@ -148,40 +412,91 @@ section {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     min-height: 95vh;
-    padding-bottom: 5vh;
     gap: 16px;
     overflow: visible;
 
     .box {
-        background-color: #ddd;
-        box-shadow: 0px 0px 500px rgba(0, 0, 0, 0.05);
-        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
+        background: #111;
+        // box-shadow: 0px 0px 500px rgba(0, 0, 0, 0.05);
+        border-radius: $card-corner-radius;
         padding: 48px;
+        padding-bottom: 450px;
+        // transition: all 200ms ease-out;
 
-        h2 {
-            font-size: 2rem;
-            font-weight: 500;
-            padding-bottom: 24px;
+        &:hover {
+            // transform: scale(0.99);
+            // z-index: 500;
+            // box-shadow: 0px 0px 200px rgba(0,0,0,0.2);
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            line-height: 1.8rem;
+            margin-bottom: 40px;
+        }
+
+        .button {
+            font-weight: 500;
+        }
+
+        &:after {
+            // content: "->";
+            // bottom: 48px;
+            // right: 48px;
+            // width: 64px;
+            // height: 64px;
+            // text-align: center;
+            // line-height: 64px;
+            // border-radius: 100%;
+            // background: white;
+            // position: absolute;
+            // z-index: 500;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            max-width: 60%;
+        }
+
+        .small-text {
+            margin-bottom: 24px;
+            color: white;
+            font-weight: 500;
         }
     }
 
     .box1 {
         grid-area: box1;
-        background: #000;
-        color: white;
     }
 
     .box2 {
         grid-area: box2;
-        background: white;
     }
 
     .box3 {
         grid-area: box3;
+
+        h3 {
+            max-width: 60%;
+        }
+
+        p {
+            max-width: 50%;
+        }
+    }
+
+    h3 {
+        margin-bottom: 24px;
+        font-size: 2.3rem;
+        line-height: 2.9rem;
+    }
+
+    h3,
+    p {
+        color: white;
     }
 }
 
@@ -196,83 +511,126 @@ section {
     }
 }
 
+/* Images */
+.image-bottom-center {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.image-bottom-left {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
 section {
-    max-width: 1600px;
+    width: $section-width;
+    max-width: $section-max-width;
     margin: 0 auto;
-    padding: 0 5vw;
+    // padding: 0 5vw;
 }
 
-/* Carousel */
-.bento-container .carousel {
-    padding: 0;
+// .carousel {
+//     display: flex;
+//     flex-direction: column;
+//     overflow: hidden;
+//     min-height: 400px;
 
+//     .carousel-track-container {
+//         position: relative;
+//         overflow: hidden;
+//         flex: 1;
+//         /* Allow this container to grow and fill the available space */
+//     }
+
+//     .carousel-track {
+//         position: relative;
+//         height: 100%;
+//         /* Ensure the track fills the container */
+//     }
+
+//     .carousel-slide {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         opacity: 0;
+//         height: 100%;
+//         transition: opacity 0.5s ease-in-out;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+
+//         &.current-slide {
+//             opacity: 1;
+//         }
+
+//         &:first-child {
+//             background: #eee;
+//         }
+
+//         &:nth-child(2) {
+//             background: #eee;
+//         }
+
+//         &:nth-child(3) {
+//             background: #eee;
+//         }
+//     }
+// }
+
+// .carousel-nav {
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-around;
+
+//     .carousel-nav-item {
+//         text-align: center;
+//         cursor: pointer;
+
+//         &:hover,
+//         &.active {
+//             color: red;
+//         }
+
+//         span {
+//             display: block;
+//             // font-size: 16px;
+//         }
+//     }
+// }
+
+/* Initial state */
+.section-to-animate {
+    opacity: 0;
+    transition: opacity 0.3s ease-out, transform 0.3s cubic-bezier(0.2, 0.65, 0.6, 1);
 }
-.carousel {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
 
-    .carousel-track-container {
-        position: relative;
-        overflow: hidden;
-        flex: 1;
-        /* Allow this container to grow and fill the available space */
-    }
-
-    .carousel-track {
-        position: relative;
-        height: 100%;
-        /* Ensure the track fills the container */
-    }
-
-    .carousel-slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &.current-slide {
-            opacity: 1;
-        }
-
-        &:first-child {
-            background: red;
-        }
-
-        &:nth-child(2) {
-            background: yellow;
-        }
-
-        &:nth-child(3) {
-            background: blue;
-        }
-    }
+/* Hidden state for animating down */
+.section-to-animate.initial-down {
+    transform: translateY(-40px);
 }
 
-.carousel-nav {
-    display: flex;
-    justify-content: space-around;
+/* Hidden state for animating up */
+.section-to-animate.initial-up {
+    transform: translateY(40px);
+}
 
-    .carousel-nav-item {
-        text-align: center;
-        cursor: pointer;
-
-        &:hover,
-        &.active {
-            color: red;
-        }
-
-        span {
-            display: block;
-            font-size: 16px;
-        }
-    }
+/* Final state when animated */
+.section-to-animate.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* components */
