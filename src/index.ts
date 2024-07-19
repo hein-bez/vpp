@@ -118,7 +118,9 @@ let lastScrollY = window.scrollY;
 const observerOptions: IntersectionObserverInit = {
   root: null, // Use the viewport as the root
   rootMargin: '0px', // No margin around the root
-  threshold: 0.05 // Trigger when 10% of the target is visible
+  threshold: 0.05
+  
+  // Trigger when 10% of the target is visible
 };
 
 // Function to handle the intersection events
@@ -169,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollToSection = (event: Event) => {
     const button = event.currentTarget as HTMLElement;
     const targetId = button.getAttribute('data-target');
+    const scrollAlign = button.getAttribute('[data-align');
     if (targetId) {
       const targetSection = document.getElementById(targetId);
       if (targetSection) {

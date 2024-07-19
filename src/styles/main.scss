@@ -135,7 +135,7 @@ section {
     display: flex;
     padding-top: $section-padding-top;
     padding-bottom: $section-padding-bottom;
-    min-height: 100vh;
+    // min-height: 100vh;
     position: relative;
 
     /* Calculator */
@@ -143,9 +143,10 @@ section {
         background: $background-secondary;
 
         .text {
+            display: flex;
+            flex-flow: column;
             max-width: 40vw;
-            align-self: center;
-            // margin-top: 10vh;
+            align-items: center;
             text-align: center;
 
             h1 {
@@ -156,6 +157,7 @@ section {
 
             p {
                 margin-top: 2rem;
+                max-width: 600px;
                 // font-size: 1.2rem;
                 // line-height: 2rem;
             }
@@ -167,7 +169,7 @@ section {
             flex-direction: column;
             flex-wrap: wrap;
             align-content: center;
-            justify-content: flex-start;
+            justify-content: center;
         }
 
         .buttons {
@@ -180,7 +182,7 @@ section {
             }
 
             .button-primary {
-                background: $label-primary;
+                background: $button-label-on-background;
                 color: $button-label-on-primary;
 
                 &.disabled {
@@ -201,6 +203,8 @@ section {
             background: $background-primary;
             margin-top: 10vh;
             border-radius: $card-corner-radius;
+            max-width: 1000px;
+            align-self: center;
 
             .savings-info {
                 margin-right: 48px;
@@ -267,6 +271,7 @@ section {
         background-position: bottom center;
         background-position-y: -150px;
         background-repeat: no-repeat;
+        min-height: 80vh;
 
         &:before {
             content: "";
@@ -274,9 +279,14 @@ section {
             position: absolute;
             bottom: 0;
             left: 0;
-            background-image: linear-gradient(10deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
+            background-image: linear-gradient(10deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 40%);
             width: 100%;
-            height: 100vh;
+            height: 80vh;
+        }
+
+        .spline {
+            position: absolute;
+            top: 0;
         }
     }
 
@@ -318,6 +328,33 @@ section {
         min-height: auto;
         padding-top: 0;
 
+        /* Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-bottom: $section-padding-bottom;
+        }
+
+        .grid-item {
+            display: flex;
+            justify-content: flex-start;
+            align-content: flex-end;
+            background-color: rgba(255,255,255,0.1);
+            padding: 48px;
+            text-align: center;
+            font-size: 18px;
+            padding-top: 500px;
+            border-radius: $card-corner-radius;
+
+            .text h3 {
+                color: white;
+                text-align: left;
+                line-height: 2.6rem;
+                font-weight: 400;
+            }
+        }
+
         /* Carousel */
         .carousel {
             background: #111;
@@ -325,6 +362,8 @@ section {
             width: 100%;
             min-height: 60vh;
         }
+
+        /* Graphic */
     }
 }
 
