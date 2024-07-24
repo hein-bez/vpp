@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (targetId) {
       const targetSection = document.getElementById(targetId);
       if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'end' });
       } else {
         console.error(`No element found with ID ${targetId}`);
       }
