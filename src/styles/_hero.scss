@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 90vh;
+    min-height: 95vh;
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     position: relative;
     background: $background-primary;
-    background-image: linear-gradient(0, transparent, #E5E8F7);
+    // background-image: linear-gradient(0, transparent, 80%, #53f1ff9b);
 
     // &::before {
     //     content: '';
@@ -25,8 +25,9 @@
 header {
     display: flex;
     padding: 24px;
-    position:fixed;
-    background: white;
+    position: absolute;
+    // background: white;
+    justify-content: center;
     width:100%;
     top:0;
 
@@ -72,7 +73,7 @@ main {
         align-items: center;
         max-width: 40vw;
         margin-top: 10vh;
-        max-width: 1000px;
+        max-width: 800px;
 
         h1 {
             // font-size: 4rem;

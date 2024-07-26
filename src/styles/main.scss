@@ -5,7 +5,7 @@ $grid-gap: 20px;
 $section-padding-top: 180px;
 $section-padding-bottom: 180px;
 $section-width: 80vw;
-$section-max-width: 1680px;
+$section-max-width: 2080px;
 
 /* Light */
 $background-primary: #ffffff;
@@ -341,7 +341,7 @@ section {
             display: flex;
             justify-content: flex-start;
             align-content: flex-end;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: #0f0e15;
             padding: 48px;
             text-align: center;
             font-size: 18px;
@@ -379,7 +379,7 @@ section {
         // position: absolute;
         top: 0;
         left: 0;
-        // max-width: $section-max-width;
+        max-width: 2600px;
         padding-bottom: 100px;
     }
 }
@@ -391,10 +391,25 @@ section {
     gap: $grid-gap;
 
     .box {
+        position: relative;
+        overflow: hidden;
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: $card-corner-radius;
         min-height: calc(50vh - 48px);
         padding: 48px;
+
+        .text {
+            position: relative;
+            z-index: 2;
+            max-width: 400px;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
 
         .text h4 {
             color: white;
@@ -407,21 +422,37 @@ section {
     .box1 {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .text h4 {
+            text-align: center;
+        }
     }
 
     .box2 {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .text h4 {
+            text-align: center;
+        }
     }
 
     .box3 {
         grid-column: 3 / 3;
         grid-row: 1 / 3;
         display: flex;
+        
 
         .text {
             display: flex;
             align-items: flex-end;
+            z-index: 10;
 
             h4 {
                 font-size: 2.4rem;
@@ -433,6 +464,12 @@ section {
     .box4 {
         grid-column: 1 / 3;
         grid-row: 2 / 3;
+        display: flex;
+
+        .text {
+            display: flex;
+            align-items: flex-end;
+        }
     }
 }
 
@@ -545,12 +582,13 @@ section {
 
 .bento-container {
     display: grid;
-    grid-template-areas:
-        "box1 box2"
-        "box3 box3";
+    // grid-template-areas:
+    //     "box1 box2"
+    //     "box3 box3";
+    grid-template-areas: "box1 box2";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    min-height: 95vh;
+    // grid-template-rows: 1fr 1fr;
+    // min-height: 95vh;
     gap: 16px;
     overflow: visible;
 
@@ -558,20 +596,149 @@ section {
         position: relative;
         overflow: hidden;
         background: #111;
-        // box-shadow: 0px 0px 500px rgba(0, 0, 0, 0.05);
         border-radius: $card-corner-radius;
         padding: 48px;
-        min-height: 700px;
-        @include devices(tablet) {
-            // padding-bottom: 450px;
+        min-height: 800px;
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8rem;
+            margin-bottom: 40px;
         }
-        // transition: all 200ms ease-out;
 
-        &:hover {
-            // transform: scale(0.99);
-            // z-index: 500;
-            // box-shadow: 0px 0px 200px rgba(0,0,0,0.2);
+        .button {
+            font-weight: 500;
         }
+
+        &:after {
+            // content: "->";
+            // bottom: 48px;
+            // right: 48px;
+            // width: 64px;
+            // height: 64px;
+            // text-align: center;
+            // line-height: 64px;
+            // border-radius: 100%;
+            // background: white;
+            // position: absolute;
+            // z-index: 500;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            max-width: 80%;
+
+            p {
+                max-width: 70%;
+                color: rgba(255,255,255,0.8);
+            }
+        }
+
+        .small-text {
+            margin-bottom: 24px;
+            color: white;
+            font-weight: 500;
+        }
+    }
+
+    .box1 {
+        grid-area: box1;
+    }
+
+    .box2 {
+        grid-area: box2;
+    }
+
+    .box3 {
+        grid-area: box3;
+
+        h3 {
+            max-width: 60%;
+        }
+
+        p {
+            max-width: 40%;
+        }
+    }
+
+    h3 {
+        margin-bottom: 24px;
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+    }
+
+    h3,
+    p {
+        color: white;
+    }
+}
+
+.section-header {
+    margin-top: $section-padding-top;
+    margin-bottom: 60px;
+
+    h2 {
+        font-size: 48px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+    }
+}
+
+.intro-bento-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: $grid-gap;
+    margin-top: $grid-gap;
+    margin-bottom: $section-padding-bottom;
+
+    .left-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h1 {
+            max-width: 600px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 24px;
+            font-size: 2.8rem;
+            line-height: 3.4rem;
+        }
+
+        .hightlight {
+            color: white;
+        }
+    }
+    
+    .image-placeholder img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .footer {
+        margin-top: 20px;
+    }
+    
+    // .footer button {
+    // }
+    
+    .right-column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        // border-left: 1px solid $seperator-non-opaque;
+
+        // .box:not(:last-child) {
+        //     border-bottom: 1px solid $seperator-non-opaque;
+        // }
+    }
+    
+    .box {
+        position: relative;
+        overflow: hidden;
+        background: $background-secondary;
+        border-radius: $card-corner-radius;
+        padding: 48px;
 
         p {
             font-size: 1.1rem;
@@ -604,41 +771,48 @@ section {
         }
 
         .small-text {
-            margin-bottom: 24px;
-            color: white;
+            margin-bottom: 8px;
+            // color: white;
             font-weight: 500;
+            color: $label-secondary;
         }
     }
-
-    .box1 {
-        grid-area: box1;
+    
+    .card h2 {
+        margin-bottom: 10px;
+        font-size: 28px;
+        line-height: 1.1428571429;
+        font-weight: 600;
+        letter-spacing: .007em;
+    }
+    
+    .card p {
+        font-size: 17px;
+        line-height: 1.4105263158;
+        font-weight: 600;
+        letter-spacing: 0em;
+        margin-top: 16px;
     }
 
-    .box2 {
-        grid-area: box2;
+    .header, .footer, .buttons {
+        z-index: 10;
+        position: relative;
     }
 
-    .box3 {
-        grid-area: box3;
-
-        h3 {
-            max-width: 60%;
+    .buttons {
+        .button{
+            padding: 16px 48px;
+        }
+        .button-primary {
+            background: yellow;
+            color: $label-primary;
         }
 
-        p {
-            max-width: 50%;
+        .button-secondary {
+            background: transparent;
+            border: 2px solid $button-label-on-primary;
+            color: $button-label-on-primary;
         }
-    }
-
-    h3 {
-        margin-bottom: 24px;
-        font-size: 2.3rem;
-        line-height: 2.9rem;
-    }
-
-    h3,
-    p {
-        color: white;
     }
 }
 
@@ -680,6 +854,51 @@ section {
     max-width: $section-max-width;
     margin: 0 auto;
     // padding: 0 5vw;
+}
+
+.fullgrid {
+    background: black;
+    width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+    section {
+        max-width: $section-max-width;
+        margin: 0 auto;
+    }
+
+    .row {
+        display: flex;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+    }
+
+    .column {
+        padding: 48px;
+        padding-top: 400px;
+
+        &:not(:last-child) {
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+    }
+
+    h3, h5, p {
+        color: white;
+    }
+
+    h3 { 
+        max-width: 400px;
+        margin-top: 8px;
+        margin-bottom: 24px;
+    }
+
+    p {
+        max-width: 600px;
+        color: #777
+    }
 }
 
 // .carousel {
