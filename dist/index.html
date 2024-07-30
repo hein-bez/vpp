@@ -19,7 +19,7 @@
           <use href="#agl-logo-rgb" xlink:href="#agl-logo-rgb"></use>
         </svg>
       </div>
-      <nav>
+      <!-- <nav>
         <ul>
           <li><a href="#">Vehicles</a></li>
           <li><a href="#">Energy</a></li>
@@ -27,19 +27,49 @@
           <li><a href="#">Discover</a></li>
           <li><a href="#">Shop</a></li>
         </ul>
-      </nav>
+      </nav> -->
+      <header class="nav-header">
+        <div class="nav-wrapper">
+          <div class="nav-container">
+            <div class="nav-left">
+              <a href="#" class="nav-logo">
+                <img src="images/agl-logo.svg" alt="Telstra Logo">
+              </a>
+              <nav class="nav-links">
+                <a href="#" class="nav-link active">Personal</a>
+                <a href="#" class="nav-link">Business</a>
+              </nav>
+            </div>
+            <div class="nav-right">
+              <div class="nav-dropdown">
+                <button class="nav-signin">Sign in</button>
+              </div>
+              <div class="nav-support-dropdown">
+                <button class="nav-support">Support</button>
+              </div>
+            </div>
+          </div>
+          <div class="nav-submenu">
+            <a href="#" class="submenu-link">Energy</a>
+            <a href="#" class="submenu-link">Solar & Battery</a>
+            <a href="#" class="submenu-link">EVs</a>
+            <a href="#" class="submenu-link">Internet</a>
+            <a href="#" class="submenu-link">Mobile</a>
+          </div>
+        </div>
+      </header>
     </header>
     <!-- <div style="width: 100%; display: flex; justify-content: center">
     <img src="images/house.png" />
   </div> -->
     <main>
       <div class="text section-to-animate">
-        <img width="100" src="images/agl-logo.svg" />
-        <h1>Owning a solar battery is more affordable  with Virtual Power Plant</h1>
+        <!-- <img width="100" src="images/agl-logo.svg" /> -->
+        <h1>Owning a Solar Battery is more affordable with Virtual Power Plant</h1>
         <!-- <h1>Save and Control Your Home Energy with Solar, Batteries & Virtual Power Plant</h1> -->
-        <p>A solar battery can reduce power bills and give you energy security by storing clean energy to use even when
+        <!-- <p>A solar battery can reduce power bills and give you energy security by storing clean energy to use even when
           the sun isn’t shining. AGLs Virtual Power Plant gives you big savings on the cost owning one while supporting
-          the grid and local community.</p>
+          the grid and local community.</p> -->
       </div>
       <div class="buttons section-to-animate">
         <button data-target="calculator" class="cta button">Calculate Savings</button>
@@ -58,7 +88,7 @@
         </p>
         <!-- <a class="button button-on-background">Browse Solar</a> -->
       </div>
-      <img class="image-bottom-left" src="images/solar-2.jpg" />
+      <img class="image-bottom-left" src="images/car.jpg" />
     </div>
     <div class="box box2 section-to-animate">
       <div class="content">
@@ -90,12 +120,12 @@
     </div> -->
   </section>
 
-  <section class="section-header">
+  <section class="section-header section-to-animate">
     <h2>Why join Virtual Power Plant?</h2>
   </section>
 
   <section>
-    <div class="intro-bento-container">
+    <div class="intro-bento-container section-to-animate">
       <div class="box left-column">
         <div class="header">
           <h1>When you opt-in to be part of our Virtual Power Plant <span class="hightlight">we’ll occasionally use your
@@ -107,7 +137,7 @@
           </div> -->
         <div class="buttons">
           <a class="button button-primary">Join Now</a>
-          <a class="button button-secondary">Learn More</a>
+          <a class="button button-secondary" data-target="howitworks">How does it work?</a>
         </div>
         <img class="image-bottom-center" src="images/sample-image-3.jpg">
       </div>
@@ -129,54 +159,6 @@
       </div>
     </div>
   </section>
-
-  <section class="section-header">
-    <h2>Don't have a battery yet?</h2>
-    <p>Browse our bundles below. Opt-in to VPP to unlock savings when you purchase</p>
-  </section>
-
-  <div class="container">
-    <div class="product">
-      <img src="path/to/iphone15pro-image.jpg" alt="iPhone 15 Pro">
-      <h2>iPhone 15 Pro</h2>
-      <p>The ultimate iPhone.</p>
-      <p class="price">From A$1,849</p>
-      <div class="buttons">
-        <button>Learn more</button>
-        <a href="#">Buy &gt;</a>
-      </div>
-      <div class="features">
-        <div class="feature">
-          <img src="path/to/a17pro-icon.jpg" alt="A17 Pro">
-          <p>A17 Pro chip with 6-core GPU</p>
-        </div>
-        <div class="feature">
-          <img src="path/to/pro-camera-icon.jpg" alt="Pro Camera">
-          <p>Pro camera system</p>
-        </div>
-      </div>
-    </div>
-    <div class="product">
-      <img src="path/to/iphone15-image.jpg" alt="iPhone 15">
-      <h2>iPhone 15</h2>
-      <p>A total powerhouse.</p>
-      <p class="price">From A$1,499</p>
-      <div class="buttons">
-        <button>Learn more</button>
-        <a href="#">Buy &gt;</a>
-      </div>
-      <div class="features">
-        <div class="feature">
-          <img src="path/to/a16-icon.jpg" alt="A16">
-          <p>A16 Bionic chip with 5-core GPU</p>
-        </div>
-        <div class="feature">
-          <img src="path/to/dual-camera-icon.jpg" alt="Dual Camera">
-          <p>Advanced dual-camera system</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- <section class="benefits-container section-to-animate">
     <div class="benefit">
@@ -254,7 +236,7 @@
               </label>
             </div>
           </form>
-          <div class="buttons">
+          <div style="display: none;" class="buttons">
             <a id="checkout-button" class="button button-primary">Continue</a>
           </div>
         </div>
@@ -262,10 +244,65 @@
     </section>
   </div>
 
-  <div class="spline-viewer">
-    <spline-viewer class="spline" url="https://prod.spline.design/L6PIP1c1zKxCsqDh/scene.splinecode"></spline-viewer>
+  <section class="section-header section-header-buy-battery section-to-animate">
+    <h2>Don't have a battery yet?</h2>
+    <p>Browse our bundles below. Opt-in to VPP to unlock savings when you purchase</p>
+  </section>
+
+  <div class="product-container section-to-animate">
+    <div class="product-grid">
+      <div class="product">
+        <img src="images/tesla-c.webp" alt="iPhone 15 Pro">
+        <h2>Standard bundle</h2>
+        <!-- <p>The ultimate iPhone.</p> -->
+        <p class="price">From A$1,849</p>
+        <div class="buttons">
+          <a class="button button-primary">Buy Now</a>
+          <a class="button button-secondary">Learn more</a>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <p>Sungrow High Voltage Battery</p>
+          </div>
+          <div class="feature">
+            <p>6.60kW Solar PV system</p>
+          </div>
+          <div class="feature">
+            <p>Sungrow 5.0kVA High voltage hybrid inverter</p>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <img src="images/premium_bundle.webp" alt="iPhone 15 Pro">
+        <h2>Premium bundle</h2>
+        <!-- <p>A total powerhouse.</p> -->
+        <p class="price">From A$1,499</p>
+        <div class="buttons">
+          <a class="button button-primary">Buy Now</a>
+          <a class="button button-secondary">Learn more</a>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <!-- <img src="path/to/a16-icon.jpg" alt="A16"> -->
+            <p>Tesla Powerwall solar battery</p>
+          </div>
+          <div class="feature">
+            <!-- <img src="path/to/dual-camera-icon.jpg" alt="Dual Camera"> -->
+            <p>6.60kW Solar PV system</p>
+          </div>
+          <div class="feature">
+            <p>Fronius Primo inverter</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div id="vpp" class="feature feature-battery-storage" style="background-image:url('')">
+
+  <div class="spline-viewer">
+    <!-- <spline-viewer class="spline" url="https://prod.spline.design/CEiLJgTkP2nYDgOc/scene.splinecode"></spline-viewer> -->
+    <!-- https://prod.spline.design/kRU19wVpKJnyPGLq/scene.splinecode -->
+  </div>
+  <div id="howitworks" class="feature feature-battery-storage" style="background-image:url('')">
     <!-- <spline-viewer class="spline" url="https://prod.spline.design/MpI9VZDayIEMHMl4/scene.splinecode"></spline-viewer> -->
     <!-- <spline-viewer class="spline" url="https://prod.spline.design/CEiLJgTkP2nYDgOc/scene.splinecode"></spline-viewer> -->
     <section class="backup">
@@ -273,11 +310,65 @@
         <div>
           <h5 class="small-text">Battery + Virtual Powerplant</h5>
           <!-- <h2 class="heading">Use Battery Power to Store<br>and Share Clean Energy</h2> -->
-          <h2 class="heading">How does Virtual Power Plant work?</h2>
+          <h2 class="heading">How does AGL's </br>Virtual Power Plant work?</h2>
         </div>
         <p class="body">With a battery at your home you can store energy from your solar panels to use later, saving on
           your power bills and giving you a backup in a blackout. Usually your battery only benefits you, but signing up
           in to Virtual Power Plant unlocks the possibility of exporting your battery power to the grid.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="fullgrid">
+    <div class="row section-to-animate">
+      <div class="column grid-column--savings">
+        <!-- <spline-viewer style="width: 100%;height: 600px;" url="https://prod.spline.design/kRU19wVpKJnyPGLq/scene.splinecode"></spline-viewer> -->
+        <div class="image-container">
+          <img src="images/smile.svg" />
+        </div>
+        <h5>Energy for the community</h5>
+        <h3>Be your community’s energy hero.</h3>
+        <p>With your help you can help power your state when it’s too warm or cold, and help stabilise the grid and
+          support your community when the grid needs a helping hand.</p>
+      </div>
+      <div class="column grid-column--participate">
+        <div class="image-container">
+          <img src="images/toggle.svg" />
+        </div>
+        <h5>Flexibility</h5>
+        <h3>Opt in or out of VPP events.</h3>
+        <p>With your help you can help power your state when it’s too warm or cold, and help stabilise the grid and
+          support your community when the grid needs a helping hand.</p>
+      </div>
+    </div>
+    <div class="row section-to-animate">
+      <div class="column grid-column--cycles">
+        <!-- <spline-viewer style="width: 100%;height: 600px;" url="https://prod.spline.design/kRU19wVpKJnyPGLq/scene.splinecode"></spline-viewer> -->
+        <h5>Track usage</h5>
+        <h3>Optimise battery usage with real-time insights on the AGL mobile app.</h3>
+        <p>With your help you can help power your state when it’s too warm or cold, and help stabilise the grid and
+          support your community when the grid needs a helping hand.</p>
+      </div>
+      <div class="column grid-column--sign-up">
+        <h5>Ongoing support.</h5>
+        <h3>Never left in the dark with ongoing support.</h3>
+        <p>With your help you can help power your state when it’s too warm or cold, and help stabilise the grid and
+          support your community when the grid needs a helping hand.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="" class="feature feature-battery-storage" style="background-image:url('')">
+    <section class="backup">
+      <div class="content section-to-animate">
+        <div>
+          <!-- <h5 class="small-text">Battery + Virtual Powerplant</h5> -->
+          <!-- <h2 class="heading">Use Battery Power to Store<br>and Share Clean Energy</h2> -->
+          <h2 class="heading">Ready to start saving?</h2>
+        </div>
+        <!-- <p class="body">With a battery at your home you can store energy from your solar panels to use later, saving on
+          your power bills and giving you a backup in a blackout. Usually your battery only benefits you, but signing up
+          in to Virtual Power Plant unlocks the possibility of exporting your battery power to the grid.</p> -->
       </div>
     </section>
   </div>
@@ -337,56 +428,6 @@
   <!-- </section> -->
   <!-- </div> -->
 
-  <section class="fullgrid">
-    <section class="vpp">
-      <div class="row section-to-animate">
-        <div class="column grid-column--savings">
-          <h5>Full Control</h5>
-          <h3>Be your community’s energy hero.</h3>
-          <p>With your help you can help power your state when it’s too warm or cold, and help stabilise the grid and
-            support your community when the grid needs a helping hand.</p>
-        </div>
-        <div class="column grid-column--participate">
-          <h5>Flexible</h5>
-          <h3>Maximum of 50 cycles or 120kWh of discharge per year.</h3>
-          <p>With your help you can help power your state when it’s too warm or cold, and help stabilise the grid and
-            support your community when the grid needs a helping hand.</p>
-        </div>
-      </div>
-      <div class="row section-to-animate">
-        <div class="column grid-column--cycles">
-          <h5>Full Control</h5>
-          <h3>Opt in or out of VPP events.</h3>
-          <p>With your help you can help power your state when it’s too warm or cold, and help stabilise the grid and
-            support your community when the grid needs a helping hand.</p>
-        </div>
-        <div class="column grid-column--sign-up">
-          <h5>Full Control</h5>
-          <h3>An easy way to Control your battery.</h3>
-          <p>With your help you can help power your state when it’s too warm or cold, and help stabilise the grid and
-            support your community when the grid needs a helping hand.</p>
-        </div>
-      </div>
-      <div class="row section-to-animate">
-        <div class="column grid-column--backup">
-          <h5>Full Control</h5>
-          <h3>Optimise battery usage with real-time insights on the AGL mobile app.</h3>
-          <p>With your help you can help power your state when it’s too warm or cold, and help stabilise the grid and
-            support your community when the grid needs a helping hand.</p>
-        </div>
-      </div>
-      <div class="row section-to-animate">
-        <div class="column grid-column--community">
-          <h5>Full Control</h5>
-          <h3>Never left in the dark with ongoing support.</h3>
-          <p>With your help you can help power your state when it’s too warm or cold, and help stabilise the grid and
-            support your community when the grid needs a helping hand.</p>
-        </div>
-      </div>
-    </section>
-  </section>
-
-  <div id="cursor-dot"></div>
   <script src="bundle.js"></script>
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js"></script>
 </body>

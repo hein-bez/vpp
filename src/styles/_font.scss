@@ -28,8 +28,11 @@ h2,
 .h2 {
     font-family: $font-family-sf-pro-display;
     font-weight: $font-weight-bold;
-    font-size: 3rem; // Larger size
     color: $label-primary;
+    font-size: 48px;
+    line-height: 1.0714285714;
+    font-weight: 600;
+    letter-spacing: -0.005em;
 }
 
 h3,
