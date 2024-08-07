@@ -97,10 +97,10 @@ main {
     }
 
     .cta {
-        background-color: transparent;
-        border: 2px solid $button-label-on-background;
-        color: white;
-        padding: 10px 20px;
+        border: 0;
+        background: $button-label-on-background;
+        color: $button-label-on-primary;
+        padding: 14px 24px;
         //   font-size: 1rem;
         cursor: pointer;
         margin-bottom: 30px;
@@ -111,8 +111,4 @@ main {
 .buttons {
     display: flex;
     gap: 20px;
-
-    button:first-child {
-        color: $button-label-on-background;
-    }
 }
