@@ -215,6 +215,15 @@ section {
             .savings-info {
                 margin-right: 48px;
                 min-width: 300px;
+
+                .house-icon > img {
+                    max-width: 100%;
+                    margin-bottom: 24px;
+                }
+
+                .price {
+                    margin-top: 0.5rem;
+                }
             }
 
             .savings-calculator {
@@ -272,7 +281,8 @@ section {
     /* Battery Storage */
     &.feature-battery-storage {
         align-items: end;
-        background-color: #03032F;
+        // background-color: #03032F;
+        background-color: $background-secondary;
         background-size: cover;
         background-position: bottom center;
         background-position-y: -150px;
@@ -299,7 +309,7 @@ section {
 
     .small-text {
         margin-bottom: 24px;
-        color: white;
+        // color: $label-primary;
         font-weight: 500;
     }
 
@@ -315,7 +325,7 @@ section {
 
         .heading,
         .body {
-            color: $colour-white;
+            color: $label-primary;
         }
 
         .heading {
@@ -335,7 +345,7 @@ section {
 
     /* VPP */
     &.feature-vpp {
-        background: #03032F;
+        background: $background-secondary;
         min-height: auto;
         padding-top: 0;
 
@@ -368,7 +378,7 @@ section {
 
         /* Carousel */
         .carousel {
-            background: #03032F;
+            background: $background-secondary;
             display: flex;
             width: 100%;
             min-height: 60vh;
@@ -381,7 +391,7 @@ section {
 .spline-viewer {
     // min-height: 100vh;
     position: relative;
-    background: #03032F;
+    background: $background-secondary;
     display: flex;
     justify-content: center;
 
@@ -605,7 +615,7 @@ section {
     .box {
         position: relative;
         overflow: hidden;
-        background: #03032F;
+        background: $background-secondary;
         border-radius: $card-corner-radius;
         padding: 48px;
         min-height: 800px;
@@ -1342,7 +1352,7 @@ $nav-hover-bg-color: $background-tertiary;
 }
 
 .fullgrid {
-    background: #03032F;
+    background: $background-secondary;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1369,16 +1379,18 @@ $nav-hover-bg-color: $background-tertiary;
 
     h5 {
         margin-bottom: 1rem;
+        font-size: 1.2rem;
     }
 
     .image-container {
         width: 100%;
-        height: 400px;
+        height: 500px;
         display: flex;
         justify-content: center;
 
         img {
             // max-height: 250px;
+            margin-top: 60px;
         }
     }
 
@@ -1395,23 +1407,23 @@ $nav-hover-bg-color: $background-tertiary;
         }
     }
 
-    .topleft {
-        background-image: url('/dist/images/top-left.svg');
-    }
-    .topright {
-        background-image: url('/dist/images/top-right.svg');
-    }
-    .bottomleft {
-        background-image: url('/dist/images/bottom-left.svg');
-    }
-    .bottomright {
-        background-image: url('/dist/images/bottom-right.svg');
-    }
+    // .topleft {
+    //     background-image: url('/dist/images/top-left.svg');
+    // }
+    // .topright {
+    //     background-image: url('/dist/images/top-right.svg');
+    // }
+    // .bottomleft {
+    //     background-image: url('/dist/images/bottom-left.svg');
+    // }
+    // .bottomright {
+    //     background-image: url('/dist/images/bottom-right.svg');
+    // }
 
     h3,
     h5,
     p {
-        color: white;
+        color: $label-primary;
     }
 
     h3 {
