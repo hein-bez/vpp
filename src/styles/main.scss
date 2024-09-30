@@ -136,6 +136,20 @@ section {
     overflow: hidden
 }
 
+#scrollImage {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.1s ease-out;
+}
+
+#scrollImageContent {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.1s ease-out;
+}
+
 .feature {
     display: flex;
     padding-top: $section-padding-top;
@@ -288,11 +302,12 @@ section {
     /* Battery Storage */
     &.feature-battery-storage {
         align-items: end;
-        background-color: $background-secondary;
-        background-size: cover;
-        background-position: bottom center;
-        background-position-y: -150px;
-        background-repeat: no-repeat;
+        background: linear-gradient(180deg, #EAEAEA 0%, $background-secondary 100%) !important;
+        // margin-top: -100px;
+        // background-size: cover;
+        // background-position: bottom center;
+        // background-position-y: -150px;
+        // background-repeat: no-repeat;
     }
 
     .small-text {
@@ -401,6 +416,7 @@ section {
     // min-height: 100vh;
     position: relative;
     background: $background-secondary;
+    background: #EAEAEA;
     display: flex;
     justify-content: center;
 
@@ -410,6 +426,10 @@ section {
         left: 0;
         max-width: 2600px;
         padding-bottom: 100px;
+    }
+
+    .vpp-hero-image {
+        
     }
 }
 
@@ -1420,6 +1440,10 @@ $nav-hover-bg-color: $background-tertiary;
     .grid-column--community {
         max-width: 880px;
 
+        .image-container > img {
+            max-width: 80%;
+        }
+
         h3 span {
             color: black;
         }
@@ -1450,13 +1474,17 @@ $nav-hover-bg-color: $background-tertiary;
     .grid-column--support {
         max-width: 980px;
 
+        .image-container > img {
+            max-width: 90%;
+        }
+
         h3 span {
             color: black;
         }
     }
 
     .topright, .bottomright, .bottomleft {
-        padding-bottom: 0;
+        padding-bottom: 0; 
     }
 
     // .topleft {

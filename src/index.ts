@@ -244,3 +244,53 @@ document.addEventListener('DOMContentLoaded', () => {
   handleBatteryChange(); // Ensure the VPP checkbox is properly enabled/disabled
   calculateSavings();
 });
+
+const image = document.getElementById('scrollImage');
+const content = document.getElementById('scrollImageContent');
+
+if (image && content) {
+  let imageInView = false;
+
+  // Function to move and scale the image and move content on scroll
+  const handleScroll = () => {
+    if (imageInView) {
+      const imageRect = image.getBoundingClientRect();
+      
+      // Move the image up at a slower pace
+      const moveUpValueImage = ((window.innerHeight) - imageRect.top) * 0.1;
+
+      // Calculate the percentage of the image within the viewport relative to viewport height
+      const imageTopInViewport = Math.min(Math.max(0, imageRect.top), window.innerHeight);
+      const imageBottomInViewport = Math.min(window.innerHeight, imageRect.bottom);
+      const visibleHeight = imageBottomInViewport - imageTopInViewport;
+      const visiblePart = visibleHeight / window.innerHeight;
+
+      // Scale the image based on how much is visible in the viewport (scale down to 50%)
+      const scaleValue = 0.8 + (visiblePart * 0.1); // Scale from 1 (fully visible) to 0.5 (partially visible)
+
+      // Apply both translation and scale to the image
+      image.style.transform = `translateY(-${moveUpValueImage}px)`;
+
+      // Move the content up at a faster pace
+      const moveUpValueContent = (window.innerHeight - imageRect.top) * 0.3;
+      content.style.marginTop = `-${moveUpValueContent}px`;
+    }
+  };
+
+  // IntersectionObserver to detect when the image is in view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        imageInView = true;
+        window.addEventListener('scroll', handleScroll);
+      } else {
+        imageInView = false;
+        window.removeEventListener('scroll', handleScroll);
+      }
+    });
+  });
+
+  observer.observe(image);
+} else {
+  console.error('Image or content element not found');
+}
